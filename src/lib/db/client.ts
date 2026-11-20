@@ -9,7 +9,9 @@ const globalForDb = globalThis as unknown as { pg?: ReturnType<typeof postgres> 
 
 function connection() {
   // Reuse the pool across hot reloads in development.
-  globalForDb.pg ??= postgres(env().DATABASE_URL, { prepare: false, max: 10 });
+  // Serverless (Vercel): many short-lived instances share the Supabase pooler, so each keeps
+  // a small pool. prepare:false is required by the pooler in transaction mode (port 6543).
+  globalForDb.pg ??= postgres(env().DATABASE_URL, { prepare: false, max: Number(process.env.DB_POOL_MAX ?? 5) });
   return globalForDb.pg;
 }
 
