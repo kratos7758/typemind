@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+/*
+ * TypeMind design tokens.
+ * Neutral warm "paper" foundation, one brand accent (jade ink), semantic colors kept
+ * distinct from the accent so typing feedback (correct / error / cursor) is never ambiguous.
+ */
+:root {
+  --bg: oklch(0.985 0.004 85);
+  --surface: oklch(1 0 0);
+  --surface-2: oklch(0.965 0.006 85);
+  --fg: oklch(0.22 0.012 60);
+  --fg-muted: oklch(0.50 0.012 60);
+  /* ≥ 4.5:1 on --bg (checked by the axe audit, tests/e2e/quality.spec.ts) */
+  --fg-subtle: oklch(0.54 0.010 60);
+  --border: oklch(0.90 0.008 80);
+  --border-strong: oklch(0.82 0.010 80);
+
+  --accent: oklch(0.52 0.11 170);
+  --accent-hover: oklch(0.46 0.11 170);
+  --accent-fg: oklch(0.99 0.01 170);
+  --accent-soft: oklch(0.95 0.035 170);
+
+  --danger: oklch(0.55 0.19 25);
+  --danger-soft: oklch(0.96 0.03 25);
+  --warning: oklch(0.70 0.14 75);
+
+  /* Typing Studio */
+  /* Text still to type must stay fully readable (WCAG AA). */
+  --type-pending: var(--fg-muted);
+  --type-correct: var(--fg);
+  --type-error: var(--danger);
+  --type-cursor: var(--accent);
+
+  --finger-tint: 0.35;
+
+  /* Charts — validated with the dataviz validator (scripts/validate_palette.js):
+     line passes L band + 3:1 contrast; heat ramp is ordinal, light end ≥ 2:1. */
+  --chart-line: #007d5f;
+  --chart-area: color-mix(in oklab, #007d5f 10%, transparent);
+  --chart-grid: oklch(0.92 0.006 80);
+  --heat-0: #86b6ef;
+  --heat-1: #5598e7;
+  --heat-2: #256abf;
+  --heat-3: #104281;
+  --heat-none: var(--surface-2);
+  --heat-ink-0: #0b1f3a;
+  --heat-ink-1: #0b1f3a;
+  --heat-ink-2: #ffffff;
+  --heat-ink-3: #ffffff;
+
+  --radius: 10px;
+  --focus-ring: 0 0 0 3px oklch(0.52 0.11 170 / 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: oklch(0.17 0.008 60);
+    --surface: oklch(0.21 0.008 60);
+    --surface-2: oklch(0.25 0.008 60);
+    --fg: oklch(0.94 0.008 80);
+    --fg-muted: oklch(0.72 0.010 80);
+    --fg-subtle: oklch(0.66 0.010 80);
+    --border: oklch(0.30 0.008 60);
+    --border-strong: oklch(0.38 0.010 60);
+    --accent: oklch(0.72 0.12 170);
+    --accent-hover: oklch(0.78 0.12 170);
+    --accent-fg: oklch(0.18 0.03 170);
+    --accent-soft: oklch(0.30 0.05 170);
+    --danger: oklch(0.70 0.17 25);
+    --danger-soft: oklch(0.30 0.07 25);
+    --finger-tint: 0.14;
+    --chart-line: #35a888;
+    --chart-area: color-mix(in oklab, #35a888 12%, transparent);
+    --chart-grid: oklch(0.27 0.008 60);
+    --heat-0: #184f95;
+    --heat-1: #256abf;
+    --heat-2: #3987e5;
+    --heat-3: #86b6ef;
+    --heat-ink-0: #ffffff;
+    --heat-ink-1: #ffffff;
+    --heat-ink-2: #ffffff;
+    --heat-ink-3: #0b1f3a;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: oklch(0.17 0.008 60);
+  --surface: oklch(0.21 0.008 60);
+  --surface-2: oklch(0.25 0.008 60);
+  --fg: oklch(0.94 0.008 80);
+  --fg-muted: oklch(0.72 0.010 80);
+  --fg-subtle: oklch(0.66 0.010 80);
+  --border: oklch(0.30 0.008 60);
+  --border-strong: oklch(0.38 0.010 60);
+  --accent: oklch(0.72 0.12 170);
+  --accent-hover: oklch(0.78 0.12 170);
+  --accent-fg: oklch(0.18 0.03 170);
+  --accent-soft: oklch(0.30 0.05 170);
+  --danger: oklch(0.70 0.17 25);
+  --danger-soft: oklch(0.30 0.07 25);
+  --finger-tint: 0.14;
+  --chart-line: #35a888;
+  --chart-area: color-mix(in oklab, #35a888 12%, transparent);
+  --chart-grid: oklch(0.27 0.008 60);
+  --heat-0: #184f95;
+  --heat-1: #256abf;
+  --heat-2: #3987e5;
+  --heat-3: #86b6ef;
+  --heat-ink-0: #ffffff;
+  --heat-ink-1: #ffffff;
+  --heat-ink-2: #ffffff;
+  --heat-ink-3: #0b1f3a;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: var(--font-ui), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-typing), ui-monospace, monospace;
+  --radius-md: var(--radius);
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Typing caret: a bar before the character to type next. */
+.typing-cursor {
+  position: relative;
+}
+.typing-cursor::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--type-cursor);
+}
+[data-status="idle"] .typing-cursor::before,
+[data-status="paused"] .typing-cursor::before {
+  animation: caret-blink 1s steps(1) infinite;
+}
+:not([data-focused]) > * > * > .typing-cursor::before {
+  opacity: 0.35;
+  animation: none;
+}
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

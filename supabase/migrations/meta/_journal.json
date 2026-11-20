@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1795043316400,
+      "tag": "20261118230836_init",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795043558615,
+      "tag": "20261118231238_handle_new_user",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795050640697,
+      "tag": "20261119011040_session_exercise_key",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1795050935625,
+      "tag": "20261119011535_preferences_time_zone",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795064781970,
+      "tag": "20261119050621_stripe_billing",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795131136088,
+      "tag": "20261119233216_rate_limits",
+      "breakpoints": true
+    }
+  ]
+}

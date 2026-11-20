@@ -1,0 +1,645 @@
+{
+  "meta": {
+    "title": "TypeMind — Learn typing through what you love",
+    "description": "A typing coach that adapts to your interests, your level and the way you type."
+  },
+  "nav": {
+    "login": "Log in",
+    "register": "Create account",
+    "app": "My space",
+    "logout": "Log out",
+    "pricing": "Pricing",
+    "language": "Français",
+    "skip": "Skip to content",
+    "privacy": "Privacy",
+    "terms": "Terms of service"
+  },
+  "home": {
+    "headline": "Learn typing through what you love.",
+    "subhead": "TypeMind finds the keys that slow you down and has you practice on texts you actually care about: programming, finance, science, sports, business emails…",
+    "cta": "Start for free",
+    "secondary": "I already have an account",
+    "points": [
+      {
+        "title": "Texts that make sense",
+        "body": "No more random words: you practice on topics you choose, in your language."
+      },
+      {
+        "title": "Your real weak spots",
+        "body": "Every key and letter pair is measured. Your next sessions target what holds you back."
+      },
+      {
+        "title": "Accuracy first",
+        "body": "Net speed only counts correct characters. You improve without building bad habits."
+      }
+    ],
+    "keyboards": "AZERTY, QWERTY, QWERTZ and Canadian layouts supported."
+  },
+  "auth": {
+    "email": "Email address",
+    "password": "Password",
+    "passwordHint": "At least 10 characters.",
+    "displayName": "First name or nickname (optional)",
+    "ageBracket": "Age range",
+    "age_14_17": "14 to 17",
+    "age_18_plus": "18 and over",
+    "ageNotice": "TypeMind is for ages 14 and up for now. A version for younger learners, with parental consent, is coming later.",
+    "acceptTerms": "I accept the terms of service and the privacy policy.",
+    "login": {
+      "title": "Welcome back",
+      "submit": "Log in",
+      "forgot": "Forgot your password?",
+      "noAccount": "No account yet?",
+      "register": "Create an account"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Free. No card required.",
+      "submit": "Create my account",
+      "hasAccount": "Already registered?",
+      "login": "Log in",
+      "checkEmailTitle": "Check your inbox",
+      "checkEmailBody": "We sent a confirmation link to {email}. Click it to activate your account."
+    },
+    "forgot": {
+      "title": "Reset your password",
+      "subtitle": "Enter your address: if an account exists, you'll get a link.",
+      "submit": "Send the link",
+      "sent": "If an account exists for this address, an email has just been sent.",
+      "back": "Back to log in"
+    },
+    "reset": {
+      "title": "New password",
+      "submit": "Save",
+      "done": "Password updated."
+    },
+    "errors": {
+      "invalidEmail": "Invalid email address.",
+      "passwordTooShort": "Password must be at least 10 characters.",
+      "passwordTooLong": "Password is too long.",
+      "displayNameTooLong": "60 characters maximum.",
+      "ageRequired": "Please choose your age range.",
+      "termsRequired": "You must accept the terms to continue.",
+      "invalidCredentials": "Incorrect email or password.",
+      "emailNotConfirmed": "Please confirm your address using the link we emailed you.",
+      "rateLimited": "Too many attempts. Try again in a few minutes.",
+      "weakPassword": "This password is too weak or too common.",
+      "linkInvalid": "This link is invalid or has expired. Please start again.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "app": {
+    "welcome": "Hi {name} 👋",
+    "welcomeAnonymous": "Hi 👋",
+    "plan": "Current plan: {plan}",
+    "loading": "Loading…",
+    "nav": {
+      "dashboard": "Dashboard",
+      "practice": "Practice",
+      "settings": "Preferences",
+      "analytics": "Statistics",
+      "billing": "Subscription",
+      "admin": "Admin"
+    },
+    "start": "Start today's training",
+    "next": {
+      "assessment": "Start with the placement test (1 minute): it lets us adapt your exercises.",
+      "lesson": "Next lesson: {lesson}",
+      "text": "Recommended text: {title}",
+      "retake": "Your placement test was too short or too inaccurate to be reliable. Retake it whenever you like.",
+      "adaptive": "Exercise targeting your difficult keys",
+      "accuracy": "Accuracy mode: {title}"
+    },
+    "metrics": {
+      "level": "Level",
+      "wpm": "Speed (net WPM)",
+      "accuracy": "Accuracy",
+      "streak": "Streak",
+      "streakDays": "{n} d",
+      "today": "Today",
+      "todayValue": "{done} / {goal} min",
+      "target": "Goal",
+      "none": "—"
+    },
+    "levels": {
+      "novice": "Getting started",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert"
+    },
+    "weakKeys": "Keys to work on",
+    "weakKeysEmpty": "Not enough data yet. They will appear after a few sessions.",
+    "weakBigrams": "Difficult letter pairs",
+    "recent": "Recent sessions",
+    "recentEmpty": "No sessions yet.",
+    "modes": {
+      "assessment": "Placement test",
+      "lesson": "Lesson",
+      "adaptive": "Adaptive practice",
+      "ai_text": "AI text",
+      "speed_test": "Speed test",
+      "accuracy": "Accuracy"
+    },
+    "wpmShort": "WPM",
+    "pending": "{n} session(s) waiting to be sent: they will be saved as soon as you're back online.",
+    "reasons": {
+      "no_assessment": "Let's start by measuring your level.",
+      "course": "You're progressing through the course: continue with the next lesson.",
+      "low_accuracy": "Your average accuracy is {accuracy}%: let's bring it above 90% before chasing speed.",
+      "weak_keys": "Your mistakes concentrate on: {keys}. This exercise brings them up often.",
+      "plateau": "Your speed has stopped improving over the last sessions: targeted work on difficult keys helps break through.",
+      "interests": "A text on a topic you chose, to practice in a real situation."
+    },
+    "trends": {
+      "improving": "improving",
+      "stable": "stable",
+      "declining": "declining",
+      "unknown": "not enough sessions yet"
+    },
+    "trendLabel": "Trend"
+  },
+  "onboarding": {
+    "title": "Let's personalize your learning",
+    "subtitle": "Six quick questions. You can change everything later.",
+    "step": "Step {n} of {total}",
+    "back": "Back",
+    "next": "Continue",
+    "finish": "Finish and take the test",
+    "language": {
+      "title": "Which language do you want to practice in?",
+      "hint": "The language of the texts you type. The interface follows the page address."
+    },
+    "layout": {
+      "title": "Which keyboard do you use?",
+      "hint": "Look at the first letters at the top left of your keyboard.",
+      "detected": "Detected automatically: {layout}"
+    },
+    "experience": {
+      "title": "Where are you now?",
+      "never": "I type with two fingers while looking at the keys",
+      "beginner": "I know a little about finger placement",
+      "intermediate": "I type without looking much, but I want to go faster",
+      "advanced": "I type fast and want to perfect my technique"
+    },
+    "goals": {
+      "title": "Why do you want to improve?",
+      "hint": "Choose as many as you like.",
+      "speed": "Type faster",
+      "accuracy": "Make fewer mistakes",
+      "work": "Save time at work",
+      "studies": "For my studies",
+      "programming": "Code more efficiently",
+      "touch": "Stop looking at the keyboard"
+    },
+    "interests": {
+      "title": "What are you interested in?",
+      "hint": "Your practice texts will be about these topics. Choose at least one."
+    },
+    "daily": {
+      "title": "How much time per day?",
+      "hint": "Regular practice matters more than long sessions.",
+      "minutes": "{n} min"
+    },
+    "errors": {
+      "generic": "Could not save. Please try again.",
+      "interests": "Choose at least one topic."
+    }
+  },
+  "topics": {
+    "technology": "Technology",
+    "programming": "Programming",
+    "science": "Science",
+    "space": "Space",
+    "nature": "Nature",
+    "health": "Health",
+    "sports": "Sports",
+    "finance": "Finance",
+    "business": "Business",
+    "history": "History",
+    "travel": "Travel",
+    "cooking": "Cooking"
+  },
+  "layouts": {
+    "fr-azerty": "French — AZERTY",
+    "ca-fr-csa": "Canadian French — CSA",
+    "ca-multi": "Canadian Multilingual Standard",
+    "us-qwerty": "English (US) — QWERTY",
+    "uk-qwerty": "English (UK) — QWERTY",
+    "de-qwertz": "German — QWERTZ"
+  },
+  "studio": {
+    "inputLabel": "Exercise typing area",
+    "clickToFocus": "Click here or press a key to start",
+    "paused": "Paused — click or press Esc to resume",
+    "pause": "Pause",
+    "resume": "Resume",
+    "restart": "Restart",
+    "shortcuts": "Esc: pause · Tab: restart · Backspace: correct",
+    "finger": "Finger",
+    "noHint": "No standard key for this character on your keyboard",
+    "fingers": {
+      "l-pinky": "left pinky",
+      "l-ring": "left ring finger",
+      "l-middle": "left middle finger",
+      "l-index": "left index",
+      "thumb": "thumb",
+      "r-index": "right index",
+      "r-middle": "right middle finger",
+      "r-ring": "right ring finger",
+      "r-pinky": "right pinky"
+    },
+    "stats": {
+      "wpm": "WPM",
+      "accuracy": "Accuracy",
+      "time": "Time",
+      "remaining": "Left"
+    },
+    "keys": {
+      "shift": "Shift",
+      "enter": "Enter",
+      "space": "Space",
+      "backspace": "⌫",
+      "tab": "Tab",
+      "caps": "Caps",
+      "altgr": "AltGr"
+    }
+  },
+  "results": {
+    "title": "Results",
+    "netWpm": "Net speed (WPM)",
+    "accuracy": "Accuracy",
+    "rawWpm": "Raw speed",
+    "duration": "Duration",
+    "corrected": "Corrected errors",
+    "uncorrected": "Remaining errors",
+    "consistency": "Consistency",
+    "notEnoughData": "Session too short to identify difficult keys.",
+    "weakKeys": "Keys where you hesitated or made mistakes",
+    "noWeakKeys": "No mistakes in this session. Well done!",
+    "explainNet": "Net speed only counts correct characters. Accuracy counts every keystroke: a corrected mistake is still a mistake.",
+    "saving": "Saving…",
+    "saved": "Session saved.",
+    "queued": "Offline: the session is kept on this device and will be sent automatically.",
+    "rejected": "This session could not be saved (invalid data).",
+    "unauthenticated": "Your session expired: log in again and the session will be sent afterwards.",
+    "again": "Try again",
+    "back": "Back to practice",
+    "dashboard": "Dashboard",
+    "nextLesson": "Next lesson",
+    "lessonPassed": "Lesson passed (accuracy ≥ {n}%).",
+    "lessonRetry": "Aim for at least {n}% accuracy to pass the lesson. Slow down a little: speed will follow.",
+    "assessmentDone": "Your level: {level}. Your exercises are now adapted.",
+    "assessmentUnreliable": "The test was too short or too inaccurate to be reliable. Retake it and take your time."
+  },
+  "practice": {
+    "title": "Practice",
+    "lessons": {
+      "title": "Step-by-step course",
+      "hint": "Learn the keys one by one, with the right finger.",
+      "passed": "Passed",
+      "locked": "Coming up"
+    },
+    "speed": {
+      "title": "Speed test",
+      "hint": "Common words, timed.",
+      "seconds": "{n} s",
+      "minutes": "{n} min"
+    },
+    "texts": {
+      "title": "Texts about your interests",
+      "hint": "Texts on the topics you chose.",
+      "accuracy": "Accuracy mode",
+      "accuracyHint": "The cursor only moves when the key is right."
+    },
+    "assessment": {
+      "title": "Placement test",
+      "hint": "One minute to measure your speed and accuracy.",
+      "start": "Take the test"
+    },
+    "adaptive": {
+      "title": "Targeted practice",
+      "hint": "Words chosen to work on your difficult keys and letter pairs.",
+      "start": "Start the exercise",
+      "targets": "Targets: {targets}",
+      "empty": "Do a few sessions: your difficult keys will appear here."
+    },
+    "ai": {
+      "title": "A text written for you",
+      "hint": "An original text on the topic of your choice that works on your difficult keys.",
+      "topic": "Topic",
+      "generate": "Generate the text",
+      "generating": "Writing…",
+      "remaining": "{remaining} of {limit} left this month",
+      "unavailable": "AI generation is not enabled on this server yet. Meanwhile, here is a library text on this topic.",
+      "quota": "You have used your {limit} AI texts this month. Library texts remain unlimited.",
+      "failed": "Generation failed (it was not counted). Try again, or pick a library text.",
+      "openLibrary": "Open a library text",
+      "targets": "This text works on: {targets}"
+    }
+  },
+  "lessons": {
+    "home-index": "Home row: index fingers",
+    "home-middle": "Home row: middle fingers",
+    "home-ring": "Home row: ring fingers",
+    "home-pinky": "Home row: pinkies",
+    "home-center": "Home row: center keys",
+    "top-1": "Top row (1)",
+    "top-2": "Top row (2)",
+    "top-3": "Top row (3)",
+    "top-4": "Top row (4)",
+    "top-5": "Top row (5)",
+    "bottom-1": "Bottom row (1)",
+    "bottom-2": "Bottom row (2)",
+    "bottom-3": "Bottom row (3)",
+    "bottom-4": "Bottom row (4)",
+    "bottom-5": "Bottom row (5)",
+    "special-letters": "Your keyboard's special letters",
+    "capitals": "Capital letters",
+    "numbers": "Numbers",
+    "punctuation": "Punctuation and layout",
+    "sentences": "Full sentences"
+  },
+  "assessment": {
+    "title": "Placement test",
+    "intro": "Type the text below for one minute at your natural pace. Don't rush: accuracy is measured too.",
+    "start": "I'm ready"
+  },
+  "common": {
+    "loading": "Loading…",
+    "notFound": "Page not found.",
+    "home": "Home"
+  },
+  "analytics": {
+    "title": "Statistics",
+    "period": "Last {n} days",
+    "periodLimited": "Free plan: history of the last {n} days.",
+    "empty": "No sessions in this period. Your statistics will appear after your first session.",
+    "speedChart": "Net speed per day (WPM, average)",
+    "accuracyChart": "Accuracy per day (%, average)",
+    "chartNote": "Lessons are excluded: their repetition drills don't reflect your real speed.",
+    "heatmap": "Error map by key",
+    "heatmapHint": "Color shows each key’s smoothed error rate (see the legend). Keys with at least {n} attempts.",
+    "legendLow": "few errors",
+    "legendHigh": "many errors",
+    "slowKeys": "Slowest keys",
+    "latency": "{ms} ms on average",
+    "bigrams": "Most difficult letter pairs",
+    "errorRate": "{rate}% errors",
+    "records": "Records",
+    "bestSpeed": "Best speed (speed test)",
+    "bestAccuracy": "Best accuracy (full text)",
+    "totalTime": "Practice time",
+    "sessions": "Sessions",
+    "days": "Days practiced",
+    "none": "—",
+    "readout": "{key}: {rate} errors · {attempts} attempts",
+    "notEnough": "not enough attempts yet",
+    "showTable": "Show the data",
+    "date": "Date",
+    "value": "Value",
+    "key": "Key",
+    "rate": "Errors",
+    "attempts": "Attempts",
+    "wpmUnit": "WPM",
+    "accuracyUnit": "Accuracy"
+  },
+  "settings": {
+    "title": "Preferences",
+    "saved": "Preferences saved.",
+    "save": "Save",
+    "error": "Could not save. Please check the fields.",
+    "learning": "Learning",
+    "targetWpm": "Speed goal (WPM)",
+    "targetHint": "Between 10 and 200. Leave empty for the suggested goal.",
+    "keyboard": "Keyboard and display",
+    "showKeyboard": "Show the virtual keyboard",
+    "redoAssessment": "Retake the placement test"
+  },
+  "pricing": {
+    "title": "Simple pricing",
+    "subtitle": "Learn for free. Upgrade to Pro to go further with AI.",
+    "perMonth": "/ month",
+    "perYear": "/ year",
+    "yearlySaving": "that is {monthly} per month",
+    "currencyNote": "Prices in Canadian dollars, plus applicable taxes. Cancel anytime.",
+    "free": {
+      "name": "Free",
+      "cta": "Start for free",
+      "features": [
+        "Full course and speed tests",
+        "Targeted practice on your weak keys",
+        "7-day statistics",
+        "3 AI texts per month"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "cta": "Upgrade to Pro",
+      "badge": "Recommended",
+      "features": [
+        "Everything in Free",
+        "150 AI texts per month",
+        "Full history and statistics",
+        "Long-term trends"
+      ]
+    },
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "Can I learn without paying?",
+        "a": "Yes. The course, tests, targeted practice and recent statistics are free, with no time limit."
+      },
+      {
+        "q": "How do I cancel?",
+        "a": "From the Subscription page, in one click. You keep Pro until the end of the period already paid."
+      },
+      {
+        "q": "Is my data sold?",
+        "a": "No. We don't store what you type, only statistics, and you can export or delete your account at any time."
+      }
+    ],
+    "monthly": "monthly",
+    "yearly": "yearly"
+  },
+  "billing": {
+    "title": "Subscription",
+    "current": "Current plan",
+    "renews": "Renews on {date}",
+    "endsOn": "Ends on {date} (cancellation scheduled)",
+    "pastDue": "The last payment failed. Update your card to keep Pro.",
+    "aiUsage": "AI texts this month: {used} of {limit}",
+    "subscribeMonthly": "Pro monthly — {price}",
+    "subscribeYearly": "Pro yearly — {price}",
+    "manage": "Manage subscription and invoices",
+    "unavailable": "Online payment is not enabled on this server yet. Nothing can be charged for now.",
+    "alreadySubscribed": "You already have an active subscription: manage it from the portal.",
+    "priceMissing": "Prices are not configured in Stripe yet (npm run stripe:setup).",
+    "error": "Something went wrong with the payment service. Please try again shortly.",
+    "success": "Thank you! Stripe confirmed your payment: your subscription will appear here within seconds.",
+    "canceled": "Payment canceled: nothing was charged.",
+    "securePayment": "Payment is processed by Stripe. TypeMind never sees your card number."
+  },
+  "account": {
+    "title": "My data",
+    "exportTitle": "Export my data",
+    "exportHint": "A JSON file with your profile, preferences, sessions and statistics.",
+    "exportCta": "Download",
+    "deleteTitle": "Delete my account",
+    "deleteHint": "Permanently deletes your account and all your data. An active subscription is canceled immediately, without refund of the current period.",
+    "deleteConfirm": "To confirm, type your email address: {email}",
+    "deleteCta": "Delete permanently",
+    "deleteMismatch": "The address does not match.",
+    "deleteError": "Deletion failed. Please try again or contact us."
+  },
+  "admin": {
+    "title": "Admin",
+    "readOnly": "Read-only view. No personal data is displayed.",
+    "users": "Accounts",
+    "newUsers": "New (7 d)",
+    "activeUsers": "Active (7 d)",
+    "onboarded": "Onboarding completed",
+    "subscriptions": "Active paid subscriptions",
+    "mrr": "Monthly recurring revenue (estimated)",
+    "pastDue": "Past due",
+    "sessions": "Sessions (7 d)",
+    "practiceHours": "Practice hours (7 d)",
+    "aiTitle": "AI this month",
+    "aiSucceeded": "Successful generations",
+    "aiFailed": "Failures",
+    "aiInvalid": "Invalid outputs",
+    "aiCost": "Estimated cost",
+    "plans": "Accounts by plan",
+    "plan": "Plan",
+    "count": "Accounts"
+  },
+  "footer": {
+    "rights": "© TypeMind",
+    "madeIn": "Made in Quebec"
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "body": "It's not your fault. Sessions you already saved are not lost.",
+    "retry": "Try again",
+    "home": "Back to home"
+  },
+  "legal": {
+    "draft": "Draft to be reviewed by a lawyer before public launch. Items in brackets must be completed.",
+    "updated": "Last updated: {date}",
+    "privacy": {
+      "title": "Privacy policy",
+      "sections": [
+        {
+          "h": "Who we are",
+          "p": [
+            "TypeMind is a typing-education service operated by [legal name, address]. Person in charge of the protection of personal information (Quebec Law 25): [name, email]."
+          ]
+        },
+        {
+          "h": "What we collect",
+          "p": [
+            "Account: email address, first name or nickname (optional), age range (14-17 or 18+). We do not ask for your date of birth.",
+            "Preferences: language, keyboard, interests, goals, time zone.",
+            "Learning: for each session, statistics (speed, accuracy, errors per key and letter pair, duration). The text you type is never sent to our servers.",
+            "Subscription: plan, status and Stripe customer id. Your card number is handled by Stripe only; we never see it."
+          ]
+        },
+        {
+          "h": "Why",
+          "p": [
+            "To provide the service, adapt your exercises, show your progress, manage your subscription and keep the service secure (abuse prevention). We do not sell your data and do not run targeted advertising."
+          ]
+        },
+        {
+          "h": "Artificial intelligence",
+          "p": [
+            "When you request a generated text, we send the AI provider [provider name] only the topic, language, your level and the keys to practice — never your name, email or identifier."
+          ]
+        },
+        {
+          "h": "Processors and hosting",
+          "p": [
+            "Supabase (database and authentication), Vercel (hosting), Stripe (payments), [AI provider]. Hosting region: [to be specified]. Transfers outside Quebec may occur; they are subject to a privacy impact assessment [to be carried out]."
+          ]
+        },
+        {
+          "h": "Cookies and local storage",
+          "p": [
+            "We only use cookies required to keep you signed in. Your browser's local storage keeps a finished session while offline until it is sent. No advertising or third-party analytics cookies."
+          ]
+        },
+        {
+          "h": "Retention",
+          "p": [
+            "Your data is kept as long as your account exists. Technical rate-limit records are deleted after 24 hours. Invoices remain with Stripe as required by accounting rules."
+          ]
+        },
+        {
+          "h": "Your rights",
+          "p": [
+            "Access and portability: \"Export my data\" in your preferences. Correction: Preferences page. Deletion: \"Delete my account\" (immediate and permanent). For any other request or complaint: [email]. You may also contact the Commission d'accès à l'information du Québec."
+          ]
+        },
+        {
+          "h": "Minors",
+          "p": [
+            "The service is for people aged 14 and over. An offer for younger learners, with parental consent, is not available yet."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of service",
+      "sections": [
+        {
+          "h": "The service",
+          "p": [
+            "TypeMind provides typing exercises, statistics and, depending on the plan, AI-generated texts. The service is provided \"as is\" and may change."
+          ]
+        },
+        {
+          "h": "Account",
+          "p": [
+            "You must be at least 14, provide a valid email address and keep your password confidential. An account is personal."
+          ]
+        },
+        {
+          "h": "Plans and payment",
+          "p": [
+            "The Free plan stays free. Pro is a monthly or yearly subscription, renewed automatically, paid through Stripe. Prices are in Canadian dollars, taxes extra. You can cancel at any time: Pro access continues until the end of the paid period, without prorated refund [refund policy to be validated, including under Quebec's Consumer Protection Act]."
+          ]
+        },
+        {
+          "h": "Acceptable use",
+          "p": [
+            "No automation to fake statistics, no attempt to access other people's data, no abusive use of AI generation. We may suspend an account in case of abuse."
+          ]
+        },
+        {
+          "h": "AI-generated content",
+          "p": [
+            "Generated texts are produced automatically and may contain inaccuracies. They are for practice only and are not advice (financial, medical or other)."
+          ]
+        },
+        {
+          "h": "Liability",
+          "p": [
+            "[Limitation of liability clauses to be drafted and validated by a lawyer.]"
+          ]
+        },
+        {
+          "h": "Governing law",
+          "p": [
+            "[Governing law and jurisdiction to be validated — for example, the laws of Quebec and Canada.]"
+          ]
+        },
+        {
+          "h": "Contact",
+          "p": [
+            "[Contact email]"
+          ]
+        }
+      ]
+    }
+  }
+}

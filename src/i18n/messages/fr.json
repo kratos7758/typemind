@@ -1,0 +1,645 @@
+{
+  "meta": {
+    "title": "TypeMind — Apprends à taper avec ce que tu aimes",
+    "description": "Un coach de dactylographie qui s'adapte à tes centres d'intérêt, ton niveau et ta façon de taper."
+  },
+  "nav": {
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "app": "Mon espace",
+    "logout": "Déconnexion",
+    "pricing": "Tarifs",
+    "language": "English",
+    "skip": "Aller au contenu",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d'utilisation"
+  },
+  "home": {
+    "headline": "Apprends à taper avec ce que tu aimes.",
+    "subhead": "TypeMind repère les touches qui te ralentissent et te fait pratiquer sur des textes qui t'intéressent : programmation, finance, sciences, sport, courriels professionnels…",
+    "cta": "Commencer gratuitement",
+    "secondary": "J'ai déjà un compte",
+    "points": [
+      {
+        "title": "Des textes qui ont du sens",
+        "body": "Fini les mots aléatoires : tu pratiques sur des sujets choisis, dans ta langue."
+      },
+      {
+        "title": "Tes vraies difficultés",
+        "body": "Chaque touche et chaque combinaison est mesurée. Les séances suivantes ciblent ce qui coince."
+      },
+      {
+        "title": "La précision d'abord",
+        "body": "La vitesse nette ne compte que les caractères justes. On progresse sans prendre de mauvaises habitudes."
+      }
+    ],
+    "keyboards": "Claviers AZERTY, QWERTY, QWERTZ et canadiens pris en charge."
+  },
+  "auth": {
+    "email": "Adresse courriel",
+    "password": "Mot de passe",
+    "passwordHint": "10 caractères minimum.",
+    "displayName": "Prénom ou pseudo (facultatif)",
+    "ageBracket": "Tranche d'âge",
+    "age_14_17": "14 à 17 ans",
+    "age_18_plus": "18 ans et plus",
+    "ageNotice": "TypeMind est réservé aux 14 ans et plus pour le moment. Une version pour les plus jeunes, avec accord parental, arrive plus tard.",
+    "acceptTerms": "J'accepte les conditions d'utilisation et la politique de confidentialité.",
+    "login": {
+      "title": "Content de te revoir",
+      "submit": "Se connecter",
+      "forgot": "Mot de passe oublié ?",
+      "noAccount": "Pas encore de compte ?",
+      "register": "Créer un compte"
+    },
+    "register": {
+      "title": "Crée ton compte",
+      "subtitle": "Gratuit. Aucune carte requise.",
+      "submit": "Créer mon compte",
+      "hasAccount": "Déjà inscrit ?",
+      "login": "Se connecter",
+      "checkEmailTitle": "Vérifie ta boîte courriel",
+      "checkEmailBody": "Nous avons envoyé un lien de confirmation à {email}. Clique dessus pour activer ton compte."
+    },
+    "forgot": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Indique ton adresse : si un compte existe, tu recevras un lien.",
+      "submit": "Envoyer le lien",
+      "sent": "Si un compte existe pour cette adresse, un courriel vient d'être envoyé.",
+      "back": "Retour à la connexion"
+    },
+    "reset": {
+      "title": "Nouveau mot de passe",
+      "submit": "Enregistrer",
+      "done": "Mot de passe mis à jour."
+    },
+    "errors": {
+      "invalidEmail": "Adresse courriel invalide.",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 10 caractères.",
+      "passwordTooLong": "Le mot de passe est trop long.",
+      "displayNameTooLong": "60 caractères maximum.",
+      "ageRequired": "Choisis ta tranche d'âge.",
+      "termsRequired": "Tu dois accepter les conditions pour continuer.",
+      "invalidCredentials": "Courriel ou mot de passe incorrect.",
+      "emailNotConfirmed": "Confirme d'abord ton adresse grâce au lien reçu par courriel.",
+      "rateLimited": "Trop de tentatives. Réessaie dans quelques minutes.",
+      "weakPassword": "Ce mot de passe est trop faible ou trop courant.",
+      "linkInvalid": "Ce lien est invalide ou a expiré. Recommence la procédure.",
+      "generic": "Une erreur est survenue. Réessaie."
+    }
+  },
+  "app": {
+    "welcome": "Bonjour {name} 👋",
+    "welcomeAnonymous": "Bonjour 👋",
+    "plan": "Formule actuelle : {plan}",
+    "loading": "Chargement…",
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "practice": "S'entraîner",
+      "settings": "Préférences",
+      "analytics": "Statistiques",
+      "billing": "Abonnement",
+      "admin": "Administration"
+    },
+    "start": "Commencer l'entraînement du jour",
+    "next": {
+      "assessment": "Commence par le test de niveau (1 minute) : il permet d'adapter tes exercices.",
+      "lesson": "Prochaine leçon : {lesson}",
+      "text": "Texte recommandé : {title}",
+      "retake": "Ton test de niveau était trop court ou imprécis pour être fiable. Refais-le quand tu veux.",
+      "adaptive": "Exercice ciblé sur tes touches difficiles",
+      "accuracy": "Mode précision : {title}"
+    },
+    "metrics": {
+      "level": "Niveau",
+      "wpm": "Vitesse (MPM net)",
+      "accuracy": "Précision",
+      "streak": "Série",
+      "streakDays": "{n} j",
+      "today": "Aujourd'hui",
+      "todayValue": "{done} / {goal} min",
+      "target": "Objectif",
+      "none": "—"
+    },
+    "levels": {
+      "novice": "Découverte",
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé",
+      "expert": "Expert"
+    },
+    "weakKeys": "Touches à travailler",
+    "weakKeysEmpty": "Pas encore assez de données. Elles apparaîtront après quelques séances.",
+    "weakBigrams": "Combinaisons difficiles",
+    "recent": "Séances récentes",
+    "recentEmpty": "Aucune séance pour l'instant.",
+    "modes": {
+      "assessment": "Test de niveau",
+      "lesson": "Leçon",
+      "adaptive": "Pratique adaptative",
+      "ai_text": "Texte IA",
+      "speed_test": "Test de vitesse",
+      "accuracy": "Précision"
+    },
+    "wpmShort": "MPM",
+    "pending": "{n} séance(s) en attente d'envoi : elles seront enregistrées dès le retour de la connexion.",
+    "reasons": {
+      "no_assessment": "On commence par mesurer ton niveau.",
+      "course": "Tu progresses dans le cours : continue avec la leçon suivante.",
+      "low_accuracy": "Ta précision moyenne est de {accuracy} % : on la remonte au-dessus de 90 % avant de chercher la vitesse.",
+      "weak_keys": "Tes erreurs se concentrent sur : {keys}. Cet exercice les fait revenir souvent.",
+      "plateau": "Ta vitesse ne progresse plus depuis quelques séances : un travail ciblé sur tes touches difficiles aide à débloquer.",
+      "interests": "Un texte sur un sujet que tu as choisi, pour pratiquer en situation réelle."
+    },
+    "trends": {
+      "improving": "en progression",
+      "stable": "stable",
+      "declining": "en baisse",
+      "unknown": "pas encore assez de séances"
+    },
+    "trendLabel": "Tendance"
+  },
+  "onboarding": {
+    "title": "Personnalisons ton apprentissage",
+    "subtitle": "Six questions rapides. Tu pourras tout modifier plus tard.",
+    "step": "Étape {n} sur {total}",
+    "back": "Retour",
+    "next": "Continuer",
+    "finish": "Terminer et passer le test",
+    "language": {
+      "title": "Dans quelle langue veux-tu t'entraîner ?",
+      "hint": "La langue des textes à taper. L'interface suit l'adresse de la page."
+    },
+    "layout": {
+      "title": "Quel est ton clavier ?",
+      "hint": "Regarde les premières lettres en haut à gauche de ton clavier.",
+      "detected": "Détecté automatiquement : {layout}"
+    },
+    "experience": {
+      "title": "Où en es-tu ?",
+      "never": "Je tape avec deux doigts en regardant le clavier",
+      "beginner": "Je connais un peu la position des doigts",
+      "intermediate": "Je tape sans trop regarder, mais je veux aller plus vite",
+      "advanced": "Je tape vite et je veux me perfectionner"
+    },
+    "goals": {
+      "title": "Pourquoi veux-tu progresser ?",
+      "hint": "Plusieurs choix possibles.",
+      "speed": "Taper plus vite",
+      "accuracy": "Faire moins de fautes",
+      "work": "Gagner du temps au travail",
+      "studies": "Pour mes études",
+      "programming": "Programmer plus efficacement",
+      "touch": "Ne plus regarder le clavier"
+    },
+    "interests": {
+      "title": "Qu'est-ce qui t'intéresse ?",
+      "hint": "Tes textes d'entraînement porteront sur ces sujets. Choisis-en au moins un."
+    },
+    "daily": {
+      "title": "Combien de temps par jour ?",
+      "hint": "La régularité compte plus que la durée.",
+      "minutes": "{n} min"
+    },
+    "errors": {
+      "generic": "Impossible d'enregistrer. Réessaie.",
+      "interests": "Choisis au moins un sujet."
+    }
+  },
+  "topics": {
+    "technology": "Technologie",
+    "programming": "Programmation",
+    "science": "Sciences",
+    "space": "Espace",
+    "nature": "Nature",
+    "health": "Santé",
+    "sports": "Sport",
+    "finance": "Finance",
+    "business": "Monde professionnel",
+    "history": "Histoire",
+    "travel": "Voyage",
+    "cooking": "Cuisine"
+  },
+  "layouts": {
+    "fr-azerty": "Français — AZERTY",
+    "ca-fr-csa": "Canadien français — CSA",
+    "ca-multi": "Canadien multilingue standard",
+    "us-qwerty": "Anglais (É.-U.) — QWERTY",
+    "uk-qwerty": "Anglais (R.-U.) — QWERTY",
+    "de-qwertz": "Allemand — QWERTZ"
+  },
+  "studio": {
+    "inputLabel": "Zone de saisie de l'exercice",
+    "clickToFocus": "Clique ici ou appuie sur une touche pour commencer",
+    "paused": "En pause — clique ou appuie sur Échap pour reprendre",
+    "pause": "Pause",
+    "resume": "Reprendre",
+    "restart": "Recommencer",
+    "shortcuts": "Échap : pause · Tab : recommencer · Retour arrière : corriger",
+    "finger": "Doigt",
+    "noHint": "Pas de touche standard pour ce caractère sur ton clavier",
+    "fingers": {
+      "l-pinky": "auriculaire gauche",
+      "l-ring": "annulaire gauche",
+      "l-middle": "majeur gauche",
+      "l-index": "index gauche",
+      "thumb": "pouce",
+      "r-index": "index droit",
+      "r-middle": "majeur droit",
+      "r-ring": "annulaire droit",
+      "r-pinky": "auriculaire droit"
+    },
+    "stats": {
+      "wpm": "MPM",
+      "accuracy": "Précision",
+      "time": "Temps",
+      "remaining": "Restant"
+    },
+    "keys": {
+      "shift": "Maj",
+      "enter": "Entrée",
+      "space": "Espace",
+      "backspace": "⌫",
+      "tab": "Tab",
+      "caps": "Verr. maj",
+      "altgr": "AltGr"
+    }
+  },
+  "results": {
+    "title": "Résultats",
+    "netWpm": "Vitesse nette (MPM)",
+    "accuracy": "Précision",
+    "rawWpm": "Vitesse brute",
+    "duration": "Durée",
+    "corrected": "Erreurs corrigées",
+    "uncorrected": "Erreurs restantes",
+    "consistency": "Régularité",
+    "notEnoughData": "Séance trop courte pour repérer des touches difficiles.",
+    "weakKeys": "Touches où tu as hésité ou fait des erreurs",
+    "noWeakKeys": "Aucune erreur sur cette séance. Bravo !",
+    "explainNet": "La vitesse nette ne compte que les caractères justes. La précision compte toutes tes frappes : une erreur corrigée reste une erreur.",
+    "saving": "Enregistrement…",
+    "saved": "Séance enregistrée.",
+    "queued": "Hors ligne : la séance est gardée sur cet appareil et sera envoyée automatiquement.",
+    "rejected": "Cette séance n'a pas pu être enregistrée (données invalides).",
+    "unauthenticated": "Ta session a expiré : reconnecte-toi, la séance sera envoyée ensuite.",
+    "again": "Recommencer",
+    "back": "Retour à l'entraînement",
+    "dashboard": "Tableau de bord",
+    "nextLesson": "Leçon suivante",
+    "lessonPassed": "Leçon réussie (précision ≥ {n} %).",
+    "lessonRetry": "Vise au moins {n} % de précision pour valider la leçon. Ralentis un peu : la vitesse viendra.",
+    "assessmentDone": "Ton niveau : {level}. Tes exercices sont maintenant adaptés.",
+    "assessmentUnreliable": "Le test était trop court ou trop imprécis pour être fiable. Refais-le en prenant ton temps."
+  },
+  "practice": {
+    "title": "S'entraîner",
+    "lessons": {
+      "title": "Cours progressif",
+      "hint": "Apprends les touches une à une, avec le bon doigt.",
+      "passed": "Réussie",
+      "locked": "À venir"
+    },
+    "speed": {
+      "title": "Test de vitesse",
+      "hint": "Mots courants, chronométré.",
+      "seconds": "{n} s",
+      "minutes": "{n} min"
+    },
+    "texts": {
+      "title": "Textes selon tes intérêts",
+      "hint": "Des textes sur les sujets que tu as choisis.",
+      "accuracy": "Mode précision",
+      "accuracyHint": "Le curseur n'avance que si la touche est juste."
+    },
+    "assessment": {
+      "title": "Test de niveau",
+      "hint": "Une minute pour mesurer ta vitesse et ta précision.",
+      "start": "Passer le test"
+    },
+    "adaptive": {
+      "title": "Pratique ciblée",
+      "hint": "Des mots choisis pour travailler tes touches et combinaisons difficiles.",
+      "start": "Lancer l'exercice",
+      "targets": "Cibles : {targets}",
+      "empty": "Fais quelques séances : tes touches difficiles apparaîtront ici."
+    },
+    "ai": {
+      "title": "Texte généré pour toi",
+      "hint": "Un texte original sur le sujet de ton choix, qui fait travailler tes touches difficiles.",
+      "topic": "Sujet",
+      "generate": "Générer le texte",
+      "generating": "Rédaction en cours…",
+      "remaining": "{remaining} sur {limit} ce mois-ci",
+      "unavailable": "La génération par IA n'est pas encore activée sur ce serveur. En attendant, voici un texte de la bibliothèque sur ce sujet.",
+      "quota": "Tu as utilisé tes {limit} textes IA du mois. Les textes de la bibliothèque restent illimités.",
+      "failed": "La génération a échoué (ce n'est pas décompté). Réessaie, ou choisis un texte de la bibliothèque.",
+      "openLibrary": "Ouvrir un texte de la bibliothèque",
+      "targets": "Ce texte fait travailler : {targets}"
+    }
+  },
+  "lessons": {
+    "home-index": "Rangée de base : les index",
+    "home-middle": "Rangée de base : les majeurs",
+    "home-ring": "Rangée de base : les annulaires",
+    "home-pinky": "Rangée de base : les auriculaires",
+    "home-center": "Rangée de base : le centre",
+    "top-1": "Rangée du haut (1)",
+    "top-2": "Rangée du haut (2)",
+    "top-3": "Rangée du haut (3)",
+    "top-4": "Rangée du haut (4)",
+    "top-5": "Rangée du haut (5)",
+    "bottom-1": "Rangée du bas (1)",
+    "bottom-2": "Rangée du bas (2)",
+    "bottom-3": "Rangée du bas (3)",
+    "bottom-4": "Rangée du bas (4)",
+    "bottom-5": "Rangée du bas (5)",
+    "special-letters": "Lettres spéciales de ton clavier",
+    "capitals": "Majuscules",
+    "numbers": "Chiffres",
+    "punctuation": "Ponctuation et mise en forme",
+    "sentences": "Phrases complètes"
+  },
+  "assessment": {
+    "title": "Test de niveau",
+    "intro": "Tape le texte ci-dessous pendant une minute, à ton rythme naturel. Ne cherche pas à aller trop vite : on mesure aussi la précision.",
+    "start": "Je suis prêt"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "notFound": "Page introuvable.",
+    "home": "Accueil"
+  },
+  "analytics": {
+    "title": "Statistiques",
+    "period": "{n} derniers jours",
+    "periodLimited": "Formule gratuite : historique des {n} derniers jours.",
+    "empty": "Aucune séance sur cette période. Tes statistiques apparaîtront après ta première séance.",
+    "speedChart": "Vitesse nette par jour (MPM, moyenne)",
+    "accuracyChart": "Précision par jour (%, moyenne)",
+    "chartNote": "Les leçons sont exclues : leurs exercices de répétition ne reflètent pas ta vitesse réelle.",
+    "heatmap": "Carte des erreurs par touche",
+    "heatmapHint": "La couleur indique le taux d’erreur lissé de chaque touche (voir la légende). Touches avec au moins {n} essais.",
+    "legendLow": "peu d'erreurs",
+    "legendHigh": "beaucoup d'erreurs",
+    "slowKeys": "Touches les plus lentes",
+    "latency": "{ms} ms en moyenne",
+    "bigrams": "Combinaisons les plus difficiles",
+    "errorRate": "{rate} % d'erreurs",
+    "records": "Records",
+    "bestSpeed": "Meilleure vitesse (test de vitesse)",
+    "bestAccuracy": "Meilleure précision (texte complet)",
+    "totalTime": "Temps de pratique",
+    "sessions": "Séances",
+    "days": "Jours pratiqués",
+    "none": "—",
+    "readout": "{key} : {rate} d’erreurs · {attempts} essais",
+    "notEnough": "pas encore assez d’essais",
+    "showTable": "Voir les données",
+    "date": "Date",
+    "value": "Valeur",
+    "key": "Touche",
+    "rate": "Erreurs",
+    "attempts": "Essais",
+    "wpmUnit": "MPM",
+    "accuracyUnit": "Précision"
+  },
+  "settings": {
+    "title": "Préférences",
+    "saved": "Préférences enregistrées.",
+    "save": "Enregistrer",
+    "error": "Impossible d'enregistrer. Vérifie les champs.",
+    "learning": "Apprentissage",
+    "targetWpm": "Objectif de vitesse (MPM)",
+    "targetHint": "Entre 10 et 200. Laisse vide pour l'objectif suggéré.",
+    "keyboard": "Clavier et affichage",
+    "showKeyboard": "Afficher le clavier virtuel",
+    "redoAssessment": "Repasser le test de niveau"
+  },
+  "pricing": {
+    "title": "Des tarifs simples",
+    "subtitle": "Apprends gratuitement. Passe à Pro pour aller plus loin avec l'IA.",
+    "perMonth": "/ mois",
+    "perYear": "/ an",
+    "yearlySaving": "soit {monthly} par mois",
+    "currencyNote": "Prix en dollars canadiens, taxes en sus selon ta province. Résiliable à tout moment.",
+    "free": {
+      "name": "Gratuit",
+      "cta": "Commencer gratuitement",
+      "features": [
+        "Cours complet et tests de vitesse",
+        "Pratique ciblée sur tes touches faibles",
+        "Statistiques sur 7 jours",
+        "3 textes IA par mois"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "cta": "Passer à Pro",
+      "badge": "Recommandé",
+      "features": [
+        "Tout le gratuit",
+        "150 textes IA par mois",
+        "Historique et statistiques complets",
+        "Tendances sur la durée"
+      ]
+    },
+    "faqTitle": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "Puis-je apprendre sans payer ?",
+        "a": "Oui. Le cours, les tests, la pratique ciblée et les statistiques récentes sont gratuits, sans limite de temps."
+      },
+      {
+        "q": "Comment résilier ?",
+        "a": "Depuis la page Abonnement, en un clic. Tu gardes Pro jusqu'à la fin de la période déjà payée."
+      },
+      {
+        "q": "Mes données sont-elles revendues ?",
+        "a": "Non. Nous ne stockons pas ce que tu tapes, seulement des statistiques, et tu peux exporter ou supprimer ton compte à tout moment."
+      }
+    ],
+    "monthly": "mensuel",
+    "yearly": "annuel"
+  },
+  "billing": {
+    "title": "Abonnement",
+    "current": "Formule actuelle",
+    "renews": "Renouvellement le {date}",
+    "endsOn": "Se termine le {date} (résiliation programmée)",
+    "pastDue": "Le dernier paiement a échoué. Mets à jour ta carte pour garder Pro.",
+    "aiUsage": "Textes IA ce mois-ci : {used} sur {limit}",
+    "subscribeMonthly": "Pro mensuel — {price}",
+    "subscribeYearly": "Pro annuel — {price}",
+    "manage": "Gérer l'abonnement et les factures",
+    "unavailable": "Le paiement en ligne n'est pas encore activé sur ce serveur. Aucun montant ne peut être prélevé pour l'instant.",
+    "alreadySubscribed": "Tu as déjà un abonnement actif : gère-le depuis le portail.",
+    "priceMissing": "Les prix ne sont pas encore configurés dans Stripe (npm run stripe:setup).",
+    "error": "Une erreur est survenue avec le service de paiement. Réessaie dans un instant.",
+    "success": "Merci ! Ton paiement est confirmé par Stripe : ton abonnement apparaîtra ici dans quelques secondes.",
+    "canceled": "Paiement annulé : aucun montant n'a été prélevé.",
+    "securePayment": "Le paiement est traité par Stripe. TypeMind ne voit jamais ton numéro de carte."
+  },
+  "account": {
+    "title": "Mes données",
+    "exportTitle": "Exporter mes données",
+    "exportHint": "Un fichier JSON avec ton profil, tes préférences, tes séances et tes statistiques.",
+    "exportCta": "Télécharger",
+    "deleteTitle": "Supprimer mon compte",
+    "deleteHint": "Supprime définitivement ton compte et toutes tes données. Un abonnement en cours est résilié immédiatement, sans remboursement de la période entamée.",
+    "deleteConfirm": "Pour confirmer, tape ton adresse courriel : {email}",
+    "deleteCta": "Supprimer définitivement",
+    "deleteMismatch": "L'adresse ne correspond pas.",
+    "deleteError": "La suppression a échoué. Réessaie ou contacte-nous."
+  },
+  "admin": {
+    "title": "Administration",
+    "readOnly": "Vue en lecture seule. Aucune donnée personnelle n'est affichée.",
+    "users": "Comptes",
+    "newUsers": "Nouveaux (7 j)",
+    "activeUsers": "Actifs (7 j)",
+    "onboarded": "Questionnaire terminé",
+    "subscriptions": "Abonnements payants actifs",
+    "mrr": "Revenu mensuel récurrent (estimé)",
+    "pastDue": "En retard de paiement",
+    "sessions": "Séances (7 j)",
+    "practiceHours": "Heures de pratique (7 j)",
+    "aiTitle": "IA ce mois-ci",
+    "aiSucceeded": "Générations réussies",
+    "aiFailed": "Échecs",
+    "aiInvalid": "Sorties invalides",
+    "aiCost": "Coût estimé",
+    "plans": "Répartition par formule",
+    "plan": "Formule",
+    "count": "Comptes"
+  },
+  "footer": {
+    "rights": "© TypeMind",
+    "madeIn": "Conçu au Québec"
+  },
+  "errors": {
+    "title": "Une erreur est survenue",
+    "body": "Ce n'est pas de ta faute. Tes séances déjà enregistrées ne sont pas perdues.",
+    "retry": "Réessayer",
+    "home": "Retour à l'accueil"
+  },
+  "legal": {
+    "draft": "Ébauche à faire valider par un juriste avant le lancement public. Les éléments entre crochets sont à compléter.",
+    "updated": "Dernière mise à jour : {date}",
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "sections": [
+        {
+          "h": "Qui sommes-nous",
+          "p": [
+            "TypeMind est un service d'apprentissage de la dactylographie exploité par [raison sociale, adresse]. Responsable de la protection des renseignements personnels (Loi 25) : [nom, courriel]."
+          ]
+        },
+        {
+          "h": "Ce que nous collectons",
+          "p": [
+            "Compte : adresse courriel, prénom ou pseudo (facultatif), tranche d'âge (14-17 ou 18 et plus). Nous ne demandons pas ta date de naissance.",
+            "Préférences : langue, clavier, centres d'intérêt, objectifs, fuseau horaire.",
+            "Apprentissage : pour chaque séance, des statistiques (vitesse, précision, erreurs par touche et par combinaison de lettres, durée). Le texte que tu tapes n'est jamais envoyé à nos serveurs.",
+            "Abonnement : formule, statut et identifiant client Stripe. Ton numéro de carte est traité uniquement par Stripe ; nous n'y avons jamais accès."
+          ]
+        },
+        {
+          "h": "Pourquoi",
+          "p": [
+            "Fournir le service, adapter tes exercices, afficher tes progrès, gérer ton abonnement et assurer la sécurité (prévention des abus). Nous ne vendons pas tes données et ne faisons pas de publicité ciblée."
+          ]
+        },
+        {
+          "h": "Intelligence artificielle",
+          "p": [
+            "Quand tu demandes un texte généré, nous envoyons au fournisseur d'IA [nom du fournisseur] uniquement le sujet, la langue, ton niveau et les touches à travailler — jamais ton nom, ton courriel ni ton identifiant."
+          ]
+        },
+        {
+          "h": "Sous-traitants et hébergement",
+          "p": [
+            "Supabase (base de données et authentification), Vercel (hébergement), Stripe (paiement), [fournisseur d'IA]. Région d'hébergement : [à préciser]. Des transferts hors Québec peuvent avoir lieu ; ils font l'objet d'une évaluation des facteurs relatifs à la vie privée [à réaliser]."
+          ]
+        },
+        {
+          "h": "Cookies et stockage local",
+          "p": [
+            "Nous utilisons uniquement les cookies nécessaires à ta connexion. Le stockage local de ton navigateur sert à conserver une séance terminée hors ligne jusqu'à son envoi. Aucun cookie publicitaire ni de mesure d'audience tierce."
+          ]
+        },
+        {
+          "h": "Conservation",
+          "p": [
+            "Tes données sont conservées tant que ton compte existe. Les journaux techniques de limitation de débit sont supprimés après 24 heures. Les factures restent chez Stripe selon les obligations comptables."
+          ]
+        },
+        {
+          "h": "Tes droits",
+          "p": [
+            "Accès et portabilité : bouton « Exporter mes données » dans tes préférences. Rectification : page Préférences. Suppression : bouton « Supprimer mon compte » (immédiat et définitif). Pour toute autre demande ou plainte : [courriel]. Tu peux aussi t'adresser à la Commission d'accès à l'information du Québec."
+          ]
+        },
+        {
+          "h": "Mineurs",
+          "p": [
+            "Le service est réservé aux personnes de 14 ans et plus. Une offre pour les plus jeunes, avec consentement parental, n'est pas encore disponible."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "sections": [
+        {
+          "h": "Le service",
+          "p": [
+            "TypeMind propose des exercices de dactylographie, des statistiques et, selon la formule, des textes générés par intelligence artificielle. Le service est fourni « tel quel » et peut évoluer."
+          ]
+        },
+        {
+          "h": "Compte",
+          "p": [
+            "Tu dois avoir au moins 14 ans, fournir une adresse courriel valide et garder ton mot de passe confidentiel. Un compte est personnel."
+          ]
+        },
+        {
+          "h": "Formules et paiement",
+          "p": [
+            "La formule gratuite reste gratuite. Pro est un abonnement mensuel ou annuel, renouvelé automatiquement, payé via Stripe. Les prix sont en dollars canadiens, taxes en sus. Tu peux résilier à tout moment : l'accès Pro continue jusqu'à la fin de la période payée, sans remboursement au prorata [politique de remboursement à valider, notamment au regard de la Loi sur la protection du consommateur du Québec]."
+          ]
+        },
+        {
+          "h": "Utilisation acceptable",
+          "p": [
+            "Pas d'automatisation pour fausser des statistiques, pas de tentative d'accès aux données d'autrui, pas d'usage abusif de la génération IA. Nous pouvons suspendre un compte en cas d'abus."
+          ]
+        },
+        {
+          "h": "Contenus générés par IA",
+          "p": [
+            "Les textes générés le sont automatiquement et peuvent contenir des imprécisions. Ils servent à l'entraînement et ne constituent pas des conseils (financiers, médicaux ou autres)."
+          ]
+        },
+        {
+          "h": "Responsabilité",
+          "p": [
+            "[Clauses de limitation de responsabilité à rédiger et valider par un juriste.]"
+          ]
+        },
+        {
+          "h": "Droit applicable",
+          "p": [
+            "[Droit applicable et tribunaux compétents à valider — par exemple, lois du Québec et du Canada.]"
+          ]
+        },
+        {
+          "h": "Contact",
+          "p": [
+            "[Courriel de contact]"
+          ]
+        }
+      ]
+    }
+  }
+}
