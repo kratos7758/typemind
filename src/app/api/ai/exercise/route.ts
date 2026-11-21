@@ -13,6 +13,10 @@ export async function POST(request: NextRequest) {
   const { data } = await supabase.auth.getClaims();
   const userId = data?.claims?.sub;
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  // Generation costs money: guests (anonymous, unlimited to create) must register first.
+  if (data.claims.is_anonymous === true) {
+    return NextResponse.json({ status: "account_required" }, { status: 403 });
+  }
   const limit = await rateLimit(RATE_LIMITS.aiExercise, userId);
   if (!limit.allowed) return tooManyRequests(limit);
 

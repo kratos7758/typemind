@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
+import { GuestBanner } from "@/features/auth/components/guest-banner";
 import { Logo } from "@/components/brand/logo";
 import { LanguageSwitch } from "@/components/layout/language-switch";
 import { AppNav } from "@/components/layout/app-nav";
@@ -38,6 +40,9 @@ export default async function AppLayout({ children }: LayoutProps<"/[locale]/app
           </div>
         </div>
       </header>
+      <Suspense fallback={null}>
+        <GuestBanner locale={locale} t={dict.guest} />
+      </Suspense>
       <PendingSessions label={dict.app.pending} />
       <main id="main" tabIndex={-1} className="mx-auto w-full max-w-5xl flex-1 px-4 py-10 sm:px-6">{children}</main>
     </div>

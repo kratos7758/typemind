@@ -3,6 +3,7 @@ import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { buttonVariants } from "@/components/ui/button";
 import { Logo } from "@/components/brand/logo";
 import { LanguageSwitch } from "@/components/layout/language-switch";
+import { GuestStartForm } from "@/features/auth/components/auth-forms";
 
 export default async function HomePage() {
   const locale = await getLocale();
@@ -30,13 +31,33 @@ export default async function HomePage() {
             {t.headline}
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-fg-muted text-pretty">{t.subhead}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={`/${locale}/register`} className={buttonVariants({ size: "lg" })}>
-              {t.cta}
-            </Link>
-            <Link href={`/${locale}/login`} className={buttonVariants({ variant: "secondary", size: "lg" })}>
-              {t.secondary}
-            </Link>
+          <div className="mt-8 flex flex-col gap-4">
+            <GuestStartForm
+              locale={locale}
+              t={dict.auth}
+              label={t.cta}
+              notice={
+                <p className="max-w-xl text-xs text-fg-muted">
+                  {t.guestNotice}{" "}
+                  <Link href={`/${locale}/terms`} className="underline">
+                    {dict.nav.terms}
+                  </Link>{" "}
+                  ·{" "}
+                  <Link href={`/${locale}/privacy`} className="underline">
+                    {dict.nav.privacy}
+                  </Link>
+                </p>
+              }
+            />
+            <p className="text-sm text-fg-muted">
+              <Link href={`/${locale}/register`} className="font-medium text-accent hover:underline">
+                {t.createAccount}
+              </Link>
+              {" · "}
+              <Link href={`/${locale}/login`} className="hover:text-fg">
+                {t.secondary}
+              </Link>
+            </p>
           </div>
         </section>
 

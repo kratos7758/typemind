@@ -18,7 +18,7 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  const { response, isAuthenticated } = await refreshSupabaseSession(request, NextResponse.next({ request }));
+  const { response, isAuthenticated, isGuest } = await refreshSupabaseSession(request, NextResponse.next({ request }));
   const rest = pathname.slice(segment.length + 1);
 
   const isProtected = rest === "/app" || rest.startsWith("/app/") || rest.startsWith("/onboarding");
@@ -29,8 +29,9 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // Guests (anonymous users) still need these pages: to save their progress or sign in.
   const isGuestOnly = rest === "/login" || rest === "/register";
-  if (isGuestOnly && isAuthenticated) {
+  if (isGuestOnly && isAuthenticated && !isGuest) {
     const url = request.nextUrl.clone();
     url.pathname = `/${segment}/app`;
     url.search = "";

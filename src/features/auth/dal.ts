@@ -18,6 +18,14 @@ export async function getClaims(): Promise<JwtClaims | null> {
   return data.claims as JwtClaims;
 }
 
+/**
+ * Guest = Supabase anonymous user (ADR-027): can practise and keep progress in this
+ * browser, but has no email. Features that cost money or need an address stay locked.
+ */
+export function isGuest(claims: JwtClaims): boolean {
+  return claims.is_anonymous === true;
+}
+
 export async function requireClaims(locale: Locale): Promise<JwtClaims> {
   const claims = await getClaims();
   if (!claims) redirect(`/${locale}/login`);

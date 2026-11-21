@@ -1,5 +1,17 @@
 # Avancement
 
+## 2026-11-21 — Commencer sans compte (mode invité)
+
+**Livré**
+- « Commencer gratuitement » (accueil, Tarifs) crée une session invitée Supabase anonyme, sans e-mail (ADR-027).
+- Bandeau « Mode invité » dans l'appli ; la page d'inscription convertit l'invité en compte en gardant le même identifiant et toute la progression.
+- IA et abonnement réservés aux comptes, vérifiés côté serveur.
+- Inscription compatible avec « Confirm email » désactivé (connexion immédiate).
+
+**Tests exécutés (tous verts)** : typecheck · lint · 188 unitaires · 38 intégration · 29 E2E (nouveau : parcours invité → séance → conversion → reconnexion).
+
+**À faire côté Supabase (production)** : activer « Allow anonymous sign-ins ». Purge des invités abandonnés et CAPTCHA : à prévoir.
+
 ## 2026-11-20 — Phase 5 terminée (prêt pour une bêta)
 
 **Livré**

@@ -12,6 +12,7 @@ import {
   loginAction,
   registerAction,
   resetPasswordAction,
+  startGuestAction,
   type AuthFormState,
 } from "../actions";
 import type { AuthErrorKey } from "../schemas";
@@ -130,6 +131,28 @@ export function RegisterForm({ locale, t, legal }: Props & { legal: { terms: str
       <Button type="submit" disabled={pending} className="mt-2">
         {t.register.submit}
       </Button>
+    </form>
+  );
+}
+
+/** "Start for free" button: creates a guest session, no form to fill. */
+export function GuestStartForm({
+  locale,
+  t,
+  label,
+  notice,
+  size = "lg",
+  variant = "primary",
+}: Props & { label: string; notice?: React.ReactNode; size?: "sm" | "md" | "lg"; variant?: "primary" | "secondary" }) {
+  const [state, formAction, pending] = useActionState(startGuestAction, initial);
+  return (
+    <form action={formAction} className="flex flex-col gap-2">
+      <input type="hidden" name="locale" value={locale} />
+      <Button type="submit" size={size} variant={variant} disabled={pending} className="self-start">
+        {label}
+      </Button>
+      {notice}
+      {state.status === "error" && state.formError ? <Alert>{t.errors[state.formError]}</Alert> : null}
     </form>
   );
 }

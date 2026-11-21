@@ -1,13 +1,15 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { getClaims } from "@/features/auth/dal";
+import { getClaims, isGuest } from "@/features/auth/dal";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 import { createCheckout, createPortal } from "./checkout";
 import { isPaidPlan } from "./plans";
 import { RATE_LIMITS, rateLimit } from "@/lib/rate-limit";
 
-export type BillingActionState = { status: "idle" | "unavailable" | "already_subscribed" | "price_missing" | "error" };
+export type BillingActionState = {
+  status: "idle" | "unavailable" | "already_subscribed" | "price_missing" | "account_required" | "error";
+};
 
 const localeOf = (formData: FormData): Locale => {
   const v = formData.get("locale");
@@ -19,6 +21,8 @@ export async function checkoutAction(_prev: BillingActionState, formData: FormDa
   const locale = localeOf(formData);
   const claims = await getClaims();
   if (!claims) redirect(`/${locale}/login`);
+  // A subscription needs an email (receipts, portal, recovery): guests register first.
+  if (isGuest(claims)) return { status: "account_required" };
   if (!(await rateLimit(RATE_LIMITS.billing, claims.sub)).allowed) return { status: "error" };
   const plan = formData.get("plan");
   if (!isPaidPlan(plan)) return { status: "error" };

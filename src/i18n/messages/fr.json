@@ -33,7 +33,9 @@
         "body": "La vitesse nette ne compte que les caractères justes. On progresse sans prendre de mauvaises habitudes."
       }
     ],
-    "keyboards": "Claviers AZERTY, QWERTY, QWERTZ et canadiens pris en charge."
+    "keyboards": "Claviers AZERTY, QWERTY, QWERTZ et canadiens pris en charge.",
+    "guestNotice": "Sans compte ni courriel : ta progression est gardée dans ce navigateur. En commençant, tu confirmes avoir 14 ans ou plus et accepter les conditions.",
+    "createAccount": "Créer un compte"
   },
   "auth": {
     "email": "Adresse courriel",
@@ -85,7 +87,9 @@
       "rateLimited": "Trop de tentatives. Réessaie dans quelques minutes.",
       "weakPassword": "Ce mot de passe est trop faible ou trop courant.",
       "linkInvalid": "Ce lien est invalide ou a expiré. Recommence la procédure.",
-      "generic": "Une erreur est survenue. Réessaie."
+      "generic": "Une erreur est survenue. Réessaie.",
+      "emailTaken": "Cette adresse a déjà un compte. Connecte-toi avec celui-ci (la progression invitée ne sera pas fusionnée).",
+      "guestUnavailable": "Le mode sans compte n'est pas disponible pour le moment. Crée un compte pour commencer."
     }
   },
   "app": {
@@ -335,7 +339,9 @@
       "quota": "Tu as utilisé tes {limit} textes IA du mois. Les textes de la bibliothèque restent illimités.",
       "failed": "La génération a échoué (ce n'est pas décompté). Réessaie, ou choisis un texte de la bibliothèque.",
       "openLibrary": "Ouvrir un texte de la bibliothèque",
-      "targets": "Ce texte fait travailler : {targets}"
+      "targets": "Ce texte fait travailler : {targets}",
+      "accountRequired": "Les textes générés par IA demandent un compte gratuit (3 par mois). Ta progression sera conservée.",
+      "createAccount": "Créer mon compte"
     }
   },
   "lessons": {
@@ -431,7 +437,8 @@
         "Pratique ciblée sur tes touches faibles",
         "Statistiques sur 7 jours",
         "3 textes IA par mois"
-      ]
+      ],
+      "noAccount": "Aucun compte requis pour commencer. 3 textes IA par mois une fois le compte créé."
     },
     "pro": {
       "name": "Pro",
@@ -478,7 +485,8 @@
     "error": "Une erreur est survenue avec le service de paiement. Réessaie dans un instant.",
     "success": "Merci ! Ton paiement est confirmé par Stripe : ton abonnement apparaîtra ici dans quelques secondes.",
     "canceled": "Paiement annulé : aucun montant n'a été prélevé.",
-    "securePayment": "Le paiement est traité par Stripe. TypeMind ne voit jamais ton numéro de carte."
+    "securePayment": "Le paiement est traité par Stripe. TypeMind ne voit jamais ton numéro de carte.",
+    "accountRequired": "Crée d'abord un compte gratuit pour t'abonner : ta progression sera conservée."
   },
   "account": {
     "title": "Mes données",
@@ -641,5 +649,11 @@
         }
       ]
     }
+  },
+  "guest": {
+    "banner": "Mode invité : ta progression n'est gardée que dans ce navigateur.",
+    "save": "Créer un compte pour la conserver",
+    "saveTitle": "Garde ta progression",
+    "saveSubtitle": "Tes séances et statistiques passent sur ton compte. Gratuit, aucune carte requise."
   }
 }

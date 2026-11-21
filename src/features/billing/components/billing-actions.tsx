@@ -18,6 +18,8 @@ function messageFor(state: BillingActionState, t: Labels) {
       return t.alreadySubscribed;
     case "price_missing":
       return t.priceMissing;
+    case "account_required":
+      return t.accountRequired;
     case "error":
       return t.error;
     default:

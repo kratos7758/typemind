@@ -7,6 +7,7 @@ import { Logo } from "@/components/brand/logo";
 import { LanguageSwitch } from "@/components/layout/language-switch";
 import { buttonVariants } from "@/components/ui/button";
 import { formatPrice, getPublicPlans } from "@/features/billing/queries";
+import { GuestStartForm } from "@/features/auth/components/auth-forms";
 import { format } from "@/lib/utils";
 
 export default async function PricingPage() {
@@ -46,9 +47,14 @@ export default async function PricingPage() {
                 </li>
               ))}
             </ul>
-            <Link href={`/${locale}/register`} className={buttonVariants({ variant: "secondary" })}>
-              {t.free.cta}
-            </Link>
+            <GuestStartForm
+              locale={locale}
+              t={dict.auth}
+              label={t.free.cta}
+              size="md"
+              variant="secondary"
+              notice={<p className="text-xs text-fg-muted">{t.free.noAccount}</p>}
+            />
           </article>
 
           <article className="flex flex-col gap-6 rounded-md border-2 border-accent bg-surface p-6">

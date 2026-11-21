@@ -8,7 +8,7 @@ import { NextResponse, type NextRequest } from "next/server";
 export async function refreshSupabaseSession(request: NextRequest, response: NextResponse) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
-  if (!url || !key) return { response, isAuthenticated: false };
+  if (!url || !key) return { response, isAuthenticated: false, isGuest: false };
 
   let current = response;
   const supabase = createServerClient(url, key, {
@@ -28,5 +28,9 @@ export async function refreshSupabaseSession(request: NextRequest, response: Nex
 
   // getClaims() validates the JWT; never trust getSession() on the server.
   const { data } = await supabase.auth.getClaims();
-  return { response: current, isAuthenticated: Boolean(data?.claims?.sub) };
+  return {
+    response: current,
+    isAuthenticated: Boolean(data?.claims?.sub),
+    isGuest: data?.claims?.is_anonymous === true,
+  };
 }

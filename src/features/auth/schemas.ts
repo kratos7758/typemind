@@ -17,6 +17,8 @@ export type AuthErrorKey =
   | "rateLimited"
   | "weakPassword"
   | "linkInvalid"
+  | "emailTaken"
+  | "guestUnavailable"
   | "generic";
 
 const email = z.string().trim().toLowerCase().pipe(z.email({ error: "invalidEmail" }));
@@ -48,7 +50,9 @@ export const registerSchema = z.object({
   locale,
 });
 
-export const forgotPasswordSchema = z.object({ email, locale });
+export type RegisterInput = z.infer<typeof registerSchema>;
+
+export const forgotPasswordSchema =z.object({ email, locale });
 
 export const resetPasswordSchema = z.object({ password, locale });
 
@@ -85,6 +89,11 @@ export function mapAuthError(code: string | undefined): AuthErrorKey {
       return "rateLimited";
     case "weak_password":
       return "weakPassword";
+    // Only reachable when a guest saves their progress (signUp itself never reveals it).
+    case "email_exists":
+      return "emailTaken";
+    case "anonymous_provider_disabled":
+      return "guestUnavailable";
     default:
       return "generic";
   }

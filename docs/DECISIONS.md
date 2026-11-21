@@ -80,3 +80,8 @@ Les nonces imposeraient le rendu dynamique de toutes les pages (incompatible ave
 
 ## ADR-026 — Contraste « texte discret » relevé · Acceptée (2026-11-20)
 L'audit axe a révélé `--fg-subtle` à 2,76:1 (clair) et 3,45:1 (sombre), utilisé notamment pour le texte restant à taper. Corrigé : texte à taper en `--fg-muted`, `--fg-subtle` relevé au-dessus de 4,5:1. L'audit (12 pages × 2 thèmes) fait partie des tests E2E.
+
+## ADR-027 — Commencer sans compte : utilisateurs anonymes Supabase · Acceptée (2026-11-21)
+Demande produit : « Commencer gratuitement » ne doit pas exiger de compte. Choix : `signInAnonymously()` de Supabase plutôt qu'un mode 100 % navigateur. L'invité est un vrai utilisateur (`is_anonymous` dans le JWT) : RLS, séances, statistiques et apprentissage adaptatif fonctionnent sans code dupliqué. Pour sauvegarder, la page d'inscription convertit l'invité (`updateUser({ email, password })`, envoyés ensemble car Supabase refuse un mot de passe sur un anonyme sans e-mail) : **même identifiant, progression conservée** (testé en E2E jusqu'à la reconnexion).
+Restrictions vérifiées côté serveur : pas de génération IA (403, coût), pas d'abonnement (e-mail nécessaire). La progression n'existe que dans ce navigateur tant qu'il n'y a pas de compte (bandeau permanent). Le bouton indique l'âge minimal (14 ans) et renvoie aux conditions.
+Risques : création massive d'anonymes (limite Supabase : 30/h par IP ; ajouter un CAPTCHA Turnstile si abus) ; comptes invités abandonnés à purger (tâche à prévoir, p. ex. anonymes inactifs depuis 30 jours). Prérequis : « Allow anonymous sign-ins » activé dans Supabase.

@@ -4,6 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import { getDictionary, getLocale, type Dictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { requireOnboardedUser } from "@/features/account/guards";
+import { isGuest } from "@/features/auth/dal";
 import { getPassedLessons } from "@/features/account/queries";
 import { lessonsFor } from "@/content/lessons";
 import { LIBRARY } from "@/content/library";
@@ -81,6 +82,7 @@ async function Hub({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           locale={locale}
           topics={aiTopics}
           available={aiAvailable}
+          guest={isGuest(claims)}
           quota={{ used: quota.used, limit: quota.limit }}
           t={p.ai}
         />

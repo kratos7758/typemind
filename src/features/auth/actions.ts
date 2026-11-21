@@ -17,6 +17,7 @@ import {
   toFieldErrors,
   type AuthErrorKey,
   type FieldErrors,
+  type RegisterInput,
 } from "./schemas";
 
 export type AuthFormState =
@@ -75,7 +76,12 @@ export async function registerAction(_prev: AuthFormState, formData: FormData): 
   const { email, password, displayName, ageBracket, locale } = parsed.data;
 
   const supabase = await createSupabaseServerClient();
-  const { error } = await supabase.auth.signUp({
+  const { data: current } = await supabase.auth.getClaims();
+  if (current?.claims?.is_anonymous === true) {
+    return convertGuest(current.claims.sub, formData, parsed.data);
+  }
+
+  const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
@@ -91,8 +97,58 @@ export async function registerAction(_prev: AuthFormState, formData: FormData): 
       values: keep(formData, ["email", "displayName", "ageBracket"]),
     };
   }
+  // "Confirm email" disabled in Supabase: the user is signed in right away.
+  if (data.session) redirect(`/${locale}/onboarding`);
   // Same response whether or not the address already exists (no account enumeration).
   return { status: "success", email };
+}
+
+/**
+ * Turns the current guest into a regular account. Same user id, so every session,
+ * statistic and preference is kept. Email + password must be sent together: Supabase
+ * refuses a password on an anonymous user that has no email.
+ */
+async function convertGuest(
+  userId: string,
+  formData: FormData,
+  { email, password, displayName, ageBracket, locale }: RegisterInput,
+): Promise<AuthFormState> {
+  const supabase = await createSupabaseServerClient();
+  const { data, error } = await supabase.auth.updateUser(
+    { email, password, data: { display_name: displayName ?? null, age_bracket: ageBracket } },
+    { emailRedirectTo: confirmUrl(`/${locale}/app`) },
+  );
+  if (error || !data.user) {
+    return {
+      status: "error",
+      formError: mapAuthError(error?.code),
+      values: keep(formData, ["email", "displayName", "ageBracket"]),
+    };
+  }
+  // The signup trigger only runs on insert: copy what the registration form collected.
+  await adminDb()
+    .update(profiles)
+    .set({ displayName: displayName ?? null, ageBracket })
+    .where(eq(profiles.id, userId));
+
+  // "Confirm email" off: the address is attached right away. Otherwise it waits for the link.
+  if (data.user.email && !data.user.new_email) {
+    await supabase.auth.refreshSession(); // new JWT without is_anonymous
+    redirect(`/${locale}/app`);
+  }
+  return { status: "success", email };
+}
+
+/** "Start for free" without an account: anonymous Supabase user (ADR-027). */
+export async function startGuestAction(_prev: AuthFormState, formData: FormData): Promise<AuthFormState> {
+  const locale = formLocale(formData);
+  const supabase = await createSupabaseServerClient();
+  const { data: current } = await supabase.auth.getClaims();
+  if (current?.claims?.sub) redirect(`/${locale}/app`); // already signed in (guest or not)
+  // Read by the handle_new_user trigger (interface and content language).
+  const { error } = await supabase.auth.signInAnonymously({ options: { data: { locale } } });
+  if (error) return { status: "error", formError: mapAuthError(error.code) };
+  redirect(`/${locale}/onboarding`);
 }
 
 export async function forgotPasswordAction(

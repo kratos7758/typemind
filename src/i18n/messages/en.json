@@ -33,7 +33,9 @@
         "body": "Net speed only counts correct characters. You improve without building bad habits."
       }
     ],
-    "keyboards": "AZERTY, QWERTY, QWERTZ and Canadian layouts supported."
+    "keyboards": "AZERTY, QWERTY, QWERTZ and Canadian layouts supported.",
+    "guestNotice": "No account, no email: your progress is kept in this browser. By starting, you confirm you are 14 or older and accept the terms.",
+    "createAccount": "Create an account"
   },
   "auth": {
     "email": "Email address",
@@ -85,7 +87,9 @@
       "rateLimited": "Too many attempts. Try again in a few minutes.",
       "weakPassword": "This password is too weak or too common.",
       "linkInvalid": "This link is invalid or has expired. Please start again.",
-      "generic": "Something went wrong. Please try again."
+      "generic": "Something went wrong. Please try again.",
+      "emailTaken": "This address already has an account. Sign in with it (guest progress will not be merged).",
+      "guestUnavailable": "Starting without an account is unavailable right now. Create an account to begin."
     }
   },
   "app": {
@@ -335,7 +339,9 @@
       "quota": "You have used your {limit} AI texts this month. Library texts remain unlimited.",
       "failed": "Generation failed (it was not counted). Try again, or pick a library text.",
       "openLibrary": "Open a library text",
-      "targets": "This text works on: {targets}"
+      "targets": "This text works on: {targets}",
+      "accountRequired": "AI-generated texts need a free account (3 per month). Your progress will be kept.",
+      "createAccount": "Create my account"
     }
   },
   "lessons": {
@@ -431,7 +437,8 @@
         "Targeted practice on your weak keys",
         "7-day statistics",
         "3 AI texts per month"
-      ]
+      ],
+      "noAccount": "No account needed to start. 3 AI texts per month once you create an account."
     },
     "pro": {
       "name": "Pro",
@@ -478,7 +485,8 @@
     "error": "Something went wrong with the payment service. Please try again shortly.",
     "success": "Thank you! Stripe confirmed your payment: your subscription will appear here within seconds.",
     "canceled": "Payment canceled: nothing was charged.",
-    "securePayment": "Payment is processed by Stripe. TypeMind never sees your card number."
+    "securePayment": "Payment is processed by Stripe. TypeMind never sees your card number.",
+    "accountRequired": "Create a free account first to subscribe: your progress will be kept."
   },
   "account": {
     "title": "My data",
@@ -641,5 +649,11 @@
         }
       ]
     }
+  },
+  "guest": {
+    "banner": "Guest mode: your progress is only kept in this browser.",
+    "save": "Create an account to keep it",
+    "saveTitle": "Keep your progress",
+    "saveSubtitle": "Your sessions and statistics move to your account. Free, no card required."
   }
 }

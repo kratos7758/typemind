@@ -16,12 +16,15 @@ type Props = {
   locale: Locale;
   topics: { key: TopicKey; label: string; libraryId: string | null }[];
   available: boolean;
+  /** Guests must create an account first (enforced by the API too). */
+  guest: boolean;
   quota: { used: number; limit: number };
   t: Labels;
 };
 
 type State =
   | { status: "idle" }
+  | { status: "account" }
   | { status: "loading" }
   | { status: "unavailable" }
   | { status: "quota" }
@@ -31,11 +34,17 @@ type State =
  * Requests an AI exercise and opens it. Every outcome is shown honestly:
  * AI disabled on the server, monthly quota reached, or generation failure.
  */
-export function AiExerciseCard({ locale, topics, available, quota, t }: Props) {
+export function AiExerciseCard({ locale, topics, available, guest, quota, t }: Props) {
   const router = useRouter();
   const [topic, setTopic] = useState<TopicKey>(topics[0]?.key ?? "science");
   const [state, setState] = useState<State>(
-    !available ? { status: "unavailable" } : quota.used >= quota.limit ? { status: "quota" } : { status: "idle" },
+    !available
+      ? { status: "unavailable" }
+      : guest
+        ? { status: "account" }
+        : quota.used >= quota.limit
+          ? { status: "quota" }
+          : { status: "idle" },
   );
   const libraryId = topics.find((x) => x.key === topic)?.libraryId;
 
@@ -53,7 +62,14 @@ export function AiExerciseCard({ locale, topics, available, quota, t }: Props) {
         return;
       }
       setState({
-        status: response.status === 503 ? "unavailable" : response.status === 429 ? "quota" : "failed",
+        status:
+          response.status === 503
+            ? "unavailable"
+            : response.status === 429
+              ? "quota"
+              : response.status === 403
+                ? "account"
+                : "failed",
       });
     } catch {
       setState({ status: "failed" });
@@ -79,13 +95,30 @@ export function AiExerciseCard({ locale, topics, available, quota, t }: Props) {
             ))}
           </select>
         </label>
-        <Button onClick={generate} disabled={state.status === "loading" || state.status === "unavailable" || state.status === "quota"}>
+        <Button
+          onClick={generate}
+          disabled={
+            state.status === "loading" ||
+            state.status === "unavailable" ||
+            state.status === "quota" ||
+            state.status === "account"
+          }
+        >
           {state.status === "loading" ? t.generating : t.generate}
         </Button>
-        {available ? (
+        {available && !guest ? (
           <span className="pb-2.5 text-sm text-fg-muted">{format(t.remaining, { remaining, limit: quota.limit })}</span>
         ) : null}
       </div>
+
+      {state.status === "account" ? (
+        <Alert tone="info">
+          <span className="block">{t.accountRequired}</span>
+          <Link href={`/${locale}/register`} className="mt-1 inline-block font-medium underline">
+            {t.createAccount}
+          </Link>
+        </Alert>
+      ) : null}
 
       {state.status === "unavailable" || state.status === "quota" || state.status === "failed" ? (
         <Alert tone={state.status === "failed" ? "danger" : "info"}>
